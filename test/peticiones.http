@@ -1,0 +1,47 @@
+@usersp = http://localhost:3000/user/usersp
+
+@login = http://localhost:3000/user/login
+
+@getMaterias = http://localhost:3000/user/getMaterias
+
+@addMaterias = http://localhost:3000/user/add-materia
+
+POST {{login}}
+Content-Type: application/json
+
+{
+    "dni":"12",
+    "password":"321"
+}
+
+###
+POST {{usersp}}
+#header
+Content-Type: application/json
+#body
+
+{
+    "dni":"13",
+    "nombre":"carlos",
+    "contra":"54322"
+}
+
+
+###
+GET {{getMaterias}}
+auth : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkbmkiOiI5IiwiaWF0IjoxNzE2OTkyMTAzLCJleHAiOjE3MTY5OTIxNjN9.jk3yITnzMoKQYLJ_lhkc3abVYDE73RaDLcv7L9198mY
+
+
+
+
+
+###
+POST {{addMaterias}}
+#header
+Content-Content-Type: application/json
+#body
+
+{
+    "nombre":"Matematica ",
+    "descripcion": "6"
+}
